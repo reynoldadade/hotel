@@ -1,0 +1,18 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+$enable-gradients : true;
+$enable-shadows: true;
+
+$theme-colors: (
+  "purplish": 	#800080
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+
+
