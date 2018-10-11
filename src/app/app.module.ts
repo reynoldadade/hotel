@@ -7,20 +7,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import {RouterModule, Routes} from '@angular/router';
 import { MakeOrderComponent } from './make-order/make-order.component';
-import { PendingOrdersComponent } from './pending-orders/pending-orders.component';
-import { CancelledOrdersComponent } from './cancelled-orders/cancelled-orders.component';
-import { CompletedOrdersComponent } from './completed-orders/completed-orders.component';
 import { ManageStocksComponent } from './manage-stocks/manage-stocks.component';
+import { OrderTablesComponent } from './order-tables/order-tables.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login' , component: LoginComponent},
   {path: 'makeOrder' , component: MakeOrderComponent},
-  {path: 'pendingOrders' , component: PendingOrdersComponent},
-  {path: 'cancelledOrders' , component: CancelledOrdersComponent},
-  {path: 'completedOrders' , component: CompletedOrdersComponent},
-  {path: 'manageStocks' , component: ManageStocksComponent}
+  {path: 'manageStocks' , component: ManageStocksComponent},
+  {path: 'orders/:orderType', component: OrdersComponent}
 
 ];
 @NgModule({
@@ -29,10 +26,9 @@ const appRoutes: Routes = [
     NavbarComponent,
     LoginComponent,
     MakeOrderComponent,
-    PendingOrdersComponent,
-    CancelledOrdersComponent,
-    CompletedOrdersComponent,
-    ManageStocksComponent
+    ManageStocksComponent,
+    OrderTablesComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

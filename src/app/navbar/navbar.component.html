@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+  <a class="navbar-brand text-purplish" href="#" id="brand"><i class="fas fa-hotel"></i> My Hotel</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ml-3">
+        <a class="nav-link" routerLinkActive="/dashboard"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown ml-3">
+        <a class="nav-link dropdown-toggle"  href="" id="barDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-cocktail"></i> Bar & <i class="fas fa-utensils"></i> Restaurant
+        </a>
+        <div class="dropdown-menu" aria-labelledby="barDropdown">
+          <a class="dropdown-item" href="" routerLink="/makeOrder" routerLinkActive="active"><i class="fas fa-plus" ></i> Make an Order</a>
+          <a class="dropdown-item" href="" routerLink="/orders/pending" routerLinkActive="active"><i class="fas fa-clock" ></i> Pending Orders</a>
+          <a class="dropdown-item" href="" routerLink="/orders/cancelled" routerLinkActive="active"><i class="fas fa-stop" ></i> Cancelled Orders</a>
+          <a class="dropdown-item" href="" routerLink="/orders/completed" routerLinkActive="active"><i class="fas fa-thumbs-up"></i> Completed Orders</a>
+          <a class="dropdown-item" href="" routerLink="/manageStocks" routerLinkActive="active"><i class="fas fa-user-cog" ></i> Manage Stocks</a>
+
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown ml-3">
+        <a class="nav-link dropdown-toggle" href="" id="roomDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bed"></i> Rooms
+        </a>
+        <div class="dropdown-menu" aria-labelledby="roomDropdown">
+          <a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Book A Room</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-user-lock"></i> Booked Rooms</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-unlock"></i> Available Rooms</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-toolbox"></i> Rooms in Maintenance</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown ml-3">
+        <a class="nav-link dropdown-toggle" href="" id="manage" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle"></i> Accounts
+        </a>
+        <div class="dropdown-menu" aria-labelledby="manage">
+          <a class="dropdown-item" href="#"><i class="fas fa-key"></i> My Account</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Manage Employee</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-book-open"></i> Update Menu</a>
+
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

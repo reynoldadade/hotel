@@ -1,0 +1,114 @@
+<div class="row">
+  <div class="container">
+    <div class="col-md-10 offset-md-1">
+      <div class="card shadow mt-5 bg-white">
+        <div class="card-header text-center text-purplish">
+          Make an Order
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+
+              <!--start of tab heading-->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#food" role="tab" aria-controls="home" aria-selected="true"> <i class="fas fa-utensils"></i> Food</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="food-tab" data-toggle="tab" href="#drink" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-beer"></i> Drink</a>
+                </li>
+                <li class="nav-item">
+                  <input type="text" class="form-control" placeholder="search..">
+                </li>
+              </ul>
+
+              <!--end of tab heading-->
+              <!--start of tab content-->
+              <div class="tab-content">
+                <div class="tab-pane active" id="food" role="tabpanel" aria-labelledby="food-tab">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                    <tr>
+                      <th>Item Number</th>
+                      <th>Unit Price</th>
+                      <th>Item</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let food of foods">
+                      <td>{{food.id}}</td>
+                      <td>{{food.unitPrice}}</td>
+                      <td>{{food.item}}</td>
+                      <td><button class="btn btn-greenOlive">Add</button> </td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+                <div class="tab-pane" id="drink" role="tabpanel" aria-labelledby="drink-tab">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                    <tr>
+                      <th>Item Number</th>
+                      <th>Unit Price</th>
+                      <th>Item</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let drink of drinks">
+                      <td>{{drink.id}}</td>
+                      <td>{{drink.unitPrice}}</td>
+                      <td>{{drink.item}}</td>
+                      <td><button class="btn btn-greenOlive">Add</button> </td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+
+
+              </div>
+              <!--end of tab content-->
+
+            </div>
+
+            <!--left panel-->
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  Order
+                </div>
+                <div class="card-body">
+                 <table class="table table-striped table-borderless">
+                   <thead>
+                   <tr>
+                     <th>Item Number</th>
+                     <th>Unit Price</th>
+                     <th>Qty</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr *ngFor="let order of orders">
+                     <td>{{order.id}}</td>
+                     <td>{{order.unitPrice}}</td>
+                     <td>{{order.quantity}}</td>
+                   </tr>
+                   </tbody>
+                 </table>
+                  <button class="btn btn-purplish btn-block md-5">Place Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!--end of left panel-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
